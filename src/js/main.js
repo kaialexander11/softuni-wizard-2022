@@ -10,6 +10,7 @@ game.startScreen.addEventListener('click', (e) => {
     game.gameScreen.classList.remove('hidden');
 
     //Start game
+    
     //window.requestAnimationFrame(gameLoop);
     start(state, game);
 });
