@@ -17,8 +17,14 @@ function gameLoop(state, game){
         wizard.posX += 10;
     }
 
+    if(state.keys.KeyW){
+        //console.log(state.keys);
+        wizard.posY -= 10;
+    }
+
     //Render
     wizardElement.style.left = wizard.posX + 'px';
+    wizardElement.style.top = wizard.posY + 'px';
     //game.wizardElement.style.left = wizard.posX; => same as the line above
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game));
