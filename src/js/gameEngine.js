@@ -18,8 +18,15 @@ function gameLoop(state, game){
     }
 
     if(state.keys.KeyW){
-        //console.log(state.keys);
         wizard.posY -= 10;
+    }
+
+    if(state.keys.KeyA){
+        wizard.posX -= 10;
+    }
+
+    if(state.keys.KeyS){
+        wizard.posY += 10;
     }
 
     //Render
