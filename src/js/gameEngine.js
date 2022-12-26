@@ -11,22 +11,25 @@ function gameLoop(state, game){
     //console.log('frame');
     //console.log(state.keys);
 
-    //Move wizard
-    if(state.keys.KeyD){
-        //console.log(state.keys);
-        wizard.posX += 10;
-    }
+    //Move wizard => W A S D => Y and X axises
+    
 
-    if(state.keys.KeyW){
-        wizard.posY -= 10;
+    if(state.keys.KeyW  && wizard.posY > 0){
+        wizard.posY = Math.max(wizard.posY - wizard.speed, 0);
     }
 
     if(state.keys.KeyA){
-        wizard.posX -= 10;
+        wizard.posX = Math.max(wizard.posX - wizard.speed, 0);
+    }
+
+    if(state.keys.KeyD){
+        //console.log(state.keys);
+        wizard.posX = Math.min(wizard.posY + wizard.speed, game.gameScreen.offsetWidth - wizard.width);
     }
 
     if(state.keys.KeyS){
-        wizard.posY += 10;
+        wizard.posY = Math.min(wizard.posY + wizard.speed, game.gameScreen.offsetHeight - wizard.height);
+
     }
 
     //Render

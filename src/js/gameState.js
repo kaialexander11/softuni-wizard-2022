@@ -12,6 +12,7 @@ function initState() {
             // startY: 300,
             posX: startX,
             posY: startY,
+            speed: 10,
         },
         keys: {}
     }   
