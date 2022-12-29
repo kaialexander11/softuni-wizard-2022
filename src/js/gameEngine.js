@@ -39,6 +39,13 @@ function gameLoop(state, game, timestamp){
 
     });
 
+    //Move/Render fireballs:
+    document.querySelectorAll('.fireball').forEach(fireball => {
+        let posX = parseInt(fireball.style.left);
+
+        fireball.style.left = posX + state.fireball.speed + 'px';
+    });
+
     //console.log(timestamp);
 
     //console.log('frame');
