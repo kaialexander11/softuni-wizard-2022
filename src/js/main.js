@@ -7,6 +7,7 @@ const availableKeys = [
     'KeyS',
     'KeyD',
     'KeyW',
+    'Space',
 ];
 
 document.addEventListener('keydown', (e) => {
