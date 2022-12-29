@@ -21,12 +21,15 @@ function initState() {
             nextSpawnTimestamp: 0,
             maxSpawnInterval: 1500,
             speed: 8,
+            
         },
 
         fireball: {
             width: 20,
             height: 20,
             speed: 12,
+            nextSpawnTimestamp: 0,
+            fireRate: 300,
         },
 
         keys: {
