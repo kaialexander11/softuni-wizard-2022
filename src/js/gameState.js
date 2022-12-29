@@ -5,6 +5,7 @@ function initState() {
 
     const state = {
         player: 'Neo',
+        gameOver: false,
         wizard: {
             width: 82,
             height: 100,
