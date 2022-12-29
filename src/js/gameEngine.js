@@ -16,6 +16,16 @@ function gameLoop(state, game, timestamp){
         game.createBug(state.bugStats);
         state.bugStats.nextSpawnTimestamp = timestamp + Math.random() * state.bugStats.maxSpawnInterval;
     }
+
+    //Render bugs:
+    document.querySelectorAll('.bug').forEach(bug => {
+
+        let posX = parseInt(bug.style.left);
+
+        bug.style.left = posX - state.bugStats.speed + 'px';
+         
+    });
+
     
 
     //console.log(timestamp);
@@ -46,9 +56,15 @@ function gameLoop(state, game, timestamp){
 
     // }
 
-    //Render
+    //Render wizard:
     wizardElement.style.left = wizard.posX + 'px';
     wizardElement.style.top = wizard.posY + 'px';
+
+    //Render bugs:
+
+
+
+
     //game.wizardElement.style.left = wizard.posX; => same as the line above
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game));
